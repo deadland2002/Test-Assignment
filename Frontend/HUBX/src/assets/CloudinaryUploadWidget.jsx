@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import axios from 'axios';
+// const {CLOUD_NAME,UPLOAD_PRESET} = process.env;
 
 
 class CloudinaryUploadWidget extends Component {
   componentDidMount() {
+    
     const cloudName = "dhztbzkap"; 
     const uploadPreset = "ltce3xlz"; 
+    const REACT_APP_CLOUD_NAME = process.env.REACT_APP_CLOUD_NAME;
+    console.log(REACT_APP_CLOUD_NAME);
 
     var myWidget = window.cloudinary.createUploadWidget(
       {
